@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const http = require('http');
 const { Server } = require('socket.io');
 const mongoose = require('mongoose');
+const app = require('./app');
 
 
 // connect to the database
@@ -19,7 +20,6 @@ mongoose.connect(DB, {
 })
 
 
-const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
