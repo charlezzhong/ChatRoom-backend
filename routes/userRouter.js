@@ -8,6 +8,7 @@ const userController = require('./../controllers/userController')
 router
     .route('/')
     .get(userController.getAllUsers)
-    .post(userController.createUser);
+    .post(userController.createUser)
+    .delete(userController.deleteAllUsers);
 
 module.exports = router;
